@@ -1,3 +1,10 @@
+interface IModel {
+    Make_ID: number;
+    Make_Name: string;
+    Model_ID: number;
+    Model_Name: string;
+  }
+
 const ModelsList = ({ models }: { models: IModel[] }) => {
     return (
         <ul className="bg-input-bg border border-secondary rounded-lg shadow-md w-full max-w-lg">
