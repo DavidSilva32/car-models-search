@@ -19,7 +19,7 @@ interface IParams {
 }
 
 const ResultPage = ({ params }: { params: IParams }) => {
-  const [models, setModels] = useState([]);
+  const [models, setModels] = useState<IModel[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 

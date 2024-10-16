@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link"; // Importa o Link para navegação
 
 const Filter = () => {
-  const [makes, setMakes] = useState([]);
+  const [makes, setMakes] = useState<IMake[]>([]);
   const [selectedMake, setSelectedMake] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
 
