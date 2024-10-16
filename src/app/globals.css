@@ -3,25 +3,77 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #2b2d42; /* Dark background for contrast */
+  --foreground: #edf2f4; /* Light text for readability */
+  --primary: #ef233c; /* Vivid red for primary elements */
+  --secondary: #8d99ae; /* Muted grey for secondary elements */
+  --accent: #d90429; /* Red accent color for interactive elements */
+  --input-bg: #3a3b4f; /* Darker background for inputs */
+  --input-text: #edf2f4; /* Light text for input readability */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a202c; /* Darker background for dark mode */
+    --foreground: #edf2f4; /* Light grey for text in dark mode */
+    --primary: #63b3ed; /* Blue for dark mode primary elements */
+    --secondary: #718096; /* Dark grey for secondary elements */
+    --accent: #f56565; /* Slightly brighter red accent for dark mode */
+    --input-bg: #2d3748; /* Input background for dark mode */
+    --input-text: #edf2f4; /* Input text for dark mode */
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.loader {
+  border-top-color: #3498db; /* Cor do topo do spinner */
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@layer components {
+  .bg-primary {
+    background-color: var(--primary);
+  }
+
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .text-secondary {
+    color: var(--secondary);
+  }
+
+  .text-foreground {
+    color: var(--foreground);
+  }
+
+  .border-secondary {
+    border-color: var(--secondary);
+  }
+
+  .bg-input-bg {
+    background-color: var(--input-bg);
+  }
+
+  .text-input-text {
+    color: var(--input-text);
   }
 }
