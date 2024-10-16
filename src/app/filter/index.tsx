@@ -3,6 +3,13 @@
 import { useEffect, useState } from "react";
 import Link from "next/link"; // Importa o Link para navegação
 
+interface IMake {
+  MakeId: number;
+  MakeName: string;
+  VehicleTypeId: number;
+  VehicleTypeName: string;
+}
+
 const Filter = () => {
   const [makes, setMakes] = useState<IMake[]>([]);
   const [selectedMake, setSelectedMake] = useState("");

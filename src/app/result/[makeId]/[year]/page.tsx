@@ -13,6 +13,13 @@ const ModelsList = dynamic(() => import("../../../components/modelsList"), {
   suspense: true,
 });
 
+interface IModel {
+  Make_ID: number;
+  Make_Name: string;
+  Model_ID: number;
+  Model_Name: string;
+}
+
 interface IParams {
   makeId: string;
   year: string;
